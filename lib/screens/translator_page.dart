@@ -20,7 +20,7 @@ class _TranslatorPageState extends State<TranslatorPage> {
 
   _translate() {
     translator
-        .translate(fromTextController.text, to: "ar")
+        .translate(fromTextController.text, to: "ja")
         .then((result) {
       setState(() {
         toTextController.text = result.toString();
