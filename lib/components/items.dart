@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:toku_app/models/number.dart';
 
 class Item extends StatelessWidget {
-  Item({required this.number, required this.color,this.fontSize});
+  Item({required this.number, required this.color, this.fontSize});
   Color color;
-  double ?fontSize;
+  double? fontSize;
   AppModel number;
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,6 @@ class Item extends StatelessWidget {
       height: 100,
       color: color,
       child: Row(
-
         children: [
           number.image == null
               ? SizedBox(
@@ -24,7 +23,7 @@ class Item extends StatelessWidget {
                   height: 100,
                   child: Image.asset(
                     number.image!,
-scale: 1.5,
+                    scale: 1.5,
                     fit: BoxFit.contain,
                   ),
                 ),
@@ -35,12 +34,11 @@ scale: 1.5,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-
                   number.jpName,
                   style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.w500,
-                    fontSize: fontSize==null?20:fontSize,
+                    fontSize: fontSize == null ? 20 : fontSize,
                   ),
                 ),
                 Text(

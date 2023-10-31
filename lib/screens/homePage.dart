@@ -4,6 +4,7 @@ import 'package:toku_app/screens/color_page.dart';
 import 'package:toku_app/screens/familyMembersPage.dart';
 import 'package:toku_app/screens/numbersPage.dart';
 import 'package:toku_app/screens/phrase_page.dart';
+import 'package:toku_app/screens/translator_page.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -58,6 +59,19 @@ class HomePage extends StatelessWidget {
             text: "Phrase",
             color: Colors.cyan,
             photo: "assets/Images/Japan Flag Hand (1).gif",
+
+          ),
+          Category(
+            onTap: (){
+              Navigator.push(context,MaterialPageRoute(builder:(context){
+                return TranslatorPage();
+              } ));
+            },
+            text: "Translation",
+            color: Colors.yellow,
+            photo: "assets/Images/lo.png",
+           height: 140,
+            width: 140,
 
           ),
         ],

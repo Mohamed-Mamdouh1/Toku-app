@@ -1,10 +1,19 @@
 import 'package:flutter/material.dart';
+
 class Category extends StatelessWidget {
-  Category({required this.text,required this.color,required this.onTap,required this.photo});
+  Category(
+      {required this.text,
+      required this.color,
+      required this.onTap,
+      required this.photo,
+      this.height = 100,
+      this.width = 100});
   VoidCallback onTap;
   String text;
   Color color;
   String photo;
+  double height;
+  double width;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -16,7 +25,7 @@ class Category extends StatelessWidget {
             child: Container(
               width: double.infinity,
               child: Card(
-                elevation: 30,
+                  elevation: 30,
                   color: color,
                   child: Column(
                     children: [
@@ -28,7 +37,11 @@ class Category extends StatelessWidget {
                           fontWeight: FontWeight.w500,
                         ),
                       ),
-                      Image.asset(photo,scale: .2,height: 100,width: 100,),
+                      Image.asset(
+                        photo,
+                        height: height,
+                        width: width,
+                      ),
                     ],
                   )),
             ),
